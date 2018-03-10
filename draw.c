@@ -78,8 +78,8 @@ void add_curve( struct matrix *points,
     x_start = x0;
     y_start = y0;
     for (t = 0; t < 1; t += step) {
-      x_end = ax * powf(t, 3) + bx * powf(t,2) + cx * t + dx;
-      y_end = ay * powf(t, 3) + by * powf(t,2) + cy * t + dy;
+      x_end = ax * pow(t, 3) + bx * pow(t,2) + cx * t + dx;
+      y_end = ay * pow(t, 3) + by * pow(t,2) + cy * t + dy;
       add_edge(points, x_start, y_start, 0, x_end, y_end, 0);
       x_start = x_end;
       y_start = y_end;
