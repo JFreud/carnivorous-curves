@@ -69,8 +69,8 @@ void parse_file ( char * filename,
   clear_screen(s);
   color c;
   c.red = 255;
-  c.green = 0;
-  c.blue = 255;
+  c.green = 255;
+  c.blue = 0;
 
   if ( strcmp(filename, "stdin") == 0 )
     f = stdin;
@@ -117,13 +117,13 @@ void parse_file ( char * filename,
     else if ( strncmp(line, "hermite", strlen(line)) == 0 ) {
       fgets(line, sizeof(line), f); //(x0, y0, x1, y1, rx0, ry0, rx1, ry1)
       sscanf(line, "%lf %lf %lf %lf %lf %lf %lf %lf", xvals, yvals, xvals+1, yvals+1, rxvals, ryvals, rxvals+1, ryvals+1);
-      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], rxvals[0], ryvals[0], rxvals[1], ryvals[1], 0.1, 0);
+      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], rxvals[0], ryvals[0], rxvals[1], ryvals[1], 0.01, 0);
     }//end hermite
 
     else if ( strncmp(line, "bezier", strlen(line)) == 0 ) {
       fgets(line, sizeof(line), f); //(x0, y0, x1, y1, x2, y2, x3, y3)
       sscanf(line, "%lf %lf %lf %lf %lf %lf %lf %lf", xvals, yvals, xvals+1, yvals+1, rxvals, ryvals, rxvals+1, ryvals+1);
-      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], rxvals[0], ryvals[0], rxvals[1], ryvals[1], 0.1, 1);
+      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], rxvals[0], ryvals[0], rxvals[1], ryvals[1], 0.01, 1);
     }
 
     else if ( strncmp(line, "scale", strlen(line)) == 0 ) {
