@@ -1,0 +1,56 @@
+ident
+circle
+80 175 0 40
+move
+-80 -175 0
+rotate
+z -20
+move
+80 175 0
+apply
+ident
+circle
+420 175 0 40
+move
+-400 -175 0
+scale
+1.0 1.5
+move
+400 175 0
+move
+7 25 0
+apply
+ident
+bezier
+100 175 100 0 400 0 400 175
+bezier
+100 175 100 400 400 400 400 160
+circle
+200 250 0 1
+circle
+200 250 0 2
+circle
+200 250 0 3
+circle
+200 250 0 4
+circle
+200 250 0 5
+circle
+300 250 0 1
+circle
+300 250 0 2
+circle
+300 250 0 3
+circle
+300 250 0 4
+circle
+300 250 0 5
+bezier
+200 170 200 140 300 140 300 170
+bezier
+200 170 200 200 300 200 300 170
+line
+200 170 0 300 170 0
+display
+save
+face.png
